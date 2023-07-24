@@ -36,7 +36,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// const server = app.listen(8080, () => console.log(`Example app listening on port 8080!`));
+const server = app.listen(8080, () => console.log(`Example app listening on port 8080!`));
 
-// server.keepAliveTimeout = 120 * 1000;
-// server.headersTimeout = 120 * 1000;
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
