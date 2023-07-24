@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => res.sendFile(path.join(__dirname,'sample.html')));
+
 app.use('/tasks', tasksRouter);
 
 // catch 404 and forward to error handler
